@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画像表示テスト</title>
+
+    <!-- css -->
+    <style media="screen">
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .blur img {
+            filter: blur(5px);
+        }
+
+        .grayscarle img {
+
+            filter: grayscale(100%);
+        }
+    </style>
+    <!-- css -->
+</head>
+
+<body>
+    <div class="original">
+        <img src="./img/test_bg.png" alt="">
+        オリジナル画像<br>
+    </div>
+
+    <div class="blur">
+        <img src="./img/test_bg.png">
+        ガウシアンぼかし : blur(5px);<br>
+    </div>
+
+    <div class="grayscarle">
+        <img src="./img/test_bg.png" class="grayscale">
+        グレースケール : grayscale(100%);<br>
+    </div>
+</body>
+
+</html>
