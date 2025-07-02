@@ -4,42 +4,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>画像表示テスト</title>
+    <title>フィルター効果サンプル</title>
+
 
     <!-- css -->
+
     <style media="screen">
+        /* 全体指定 */
+
         img {
             width: 100%;
             height: auto;
         }
 
-        .blur img {
+        div {
+            width: 320px;
+            height: auto;
+            float: left;
+            position: relative;
+            border: #fafafa 1px solid;
+            margin: 20px;
+        }
+
+        /* 全体指定 */
+
+
+        /* brightness */
+
+        .brightnessA img {
+            filter: brightness(30%);
+        }
+
+        .brightnessB img {
+            filter: brightness(50%);
+        }
+
+        .brightnessC img {
+            filter: brightness(200%);
+        }
+
+        /* brightness */
+
+
+        /* blur */
+        .blurA img {
             filter: blur(5px);
         }
 
-        .grayscarle img {
+        .blurB img {
+            filter: blur(10px);
+        }
+
+        .blurC img {
+            filter: blur(15px);
+        }
+
+        .blurD img {
+            filter: blur(30px);
+        }
+
+        /* blur */
+
+
+        /* grayscarle */
+        .grayscarleA img {
+
+            filter: grayscale(10%);
+        }
+
+        .grayscarleB img {
+
+            filter: grayscale(30%);
+        }
+
+        .grayscarleC img {
+
+            filter: grayscale(50%);
+        }
+
+        .grayscarleD img {
 
             filter: grayscale(100%);
         }
+
+        /* grayscarle */
+
+
+        /* contrast */
+
+        .contrastA {
+            filter: contrast(10%);
+        }
+
+        .contrastB {
+            filter: contrast(30%);
+        }
+
+        .contrastC {
+            filter: contrast(50%);
+        }
+
+        .contrastD {
+            filter: contrast(100%);
+        }
+
+        /* contrast */
+
+
+        /* drop-shadow */
+
+        .drop-shadowA img {
+            filter: drop-shadow(0 0 0);
+        }
+
+        .drop-shadowB img {
+            filter: drop-shadow(10px 0 0);
+        }
+
+        .drop-shadowC img {
+            filter: drop-shadow(0 0 10px blue);
+        }
+
+        .drop-shadowD img {
+            filter: drop-shadow(-10px 10px 10px black);
+        }
+
+        /* drop-shadow */
+
+
+        /* hue-rotate */
+
+        .hue-rotateA img {
+            filter: hue-rotate(0deg);
+        }
+
+        .hue-rotateB img {
+            filter: hue-rotate(90deg)
+        }
+
+        .hue-rotateC img {
+            filter: hue-rotate(180deg)
+        }
+
+        .hue-rotateD img {
+            filter: hue-rotate(270deg)
+        }
+
+        /* hue-rotate */
     </style>
+
     <!-- css -->
 </head>
 
 <body>
+
+    <!-- original -->
+
     <div class="original">
         <img src="./img/test_bg.png" alt="">
-        オリジナル画像<br>
+        オリジナル画像
+    </div>
+    <!-- original -->
+
+
+    <!-- brightness -->
+
+    <div class="brightnessA">
+        <img src="./img/test_bg.png" alt="">
+        明るさ : brightness(30%)<br>
     </div>
 
-    <div class="blur">
+    <div class="brightness">
+        <img src="./img/test_bg.png" alt="">
+        明るさ : brightness(50%)<br>
+    </div>
+
+    <div class="brightnessC">
+        <img src="./img/test_bg.png" alt="">
+        明るさ : brightness(200%)<br>
+    </div>
+
+    <!-- brightness -->
+
+
+    <!-- blur -->
+
+    <div class="blurA">
         <img src="./img/test_bg.png">
         ガウシアンぼかし : blur(5px);<br>
     </div>
 
-    <div class="grayscarle">
+    <div class="blurB">
+        <img src="./img/test_bg.png">
+        ガウシアンぼかし : blur(10px);<br>
+    </div>
+
+    <div class="blurC">
+        <img src="./img/test_bg.png">
+        ガウシアンぼかし : blur(15px);<br>
+    </div>
+
+    <div class="blurD">
+        <img src="./img/test_bg.png">
+        ガウシアンぼかし : blur(30px);<br>
+    </div>
+
+    <!-- blur -->
+
+
+    <!-- grayscale -->
+
+    <div class="grayscarleA">
+        <img src="./img/test_bg.png" class="grayscale">
+        グレースケール : grayscale(10%);<br>
+
+    </div>
+    <div class="grayscarleB">
+        <img src="./img/test_bg.png" class="grayscale">
+        グレースケール : grayscale(30%);<br>
+
+    </div>
+    <div class="grayscarleC">
+        <img src="./img/test_bg.png" class="grayscale">
+        グレースケール : grayscale(50%);<br>
+    </div>
+
+    <div class="grayscarleD">
         <img src="./img/test_bg.png" class="grayscale">
         グレースケール : grayscale(100%);<br>
     </div>
+
+    <!-- grayscale -->
+
+
+    <!-- contrast -->
+
+    <div class="contrastA">
+        <img src="./img/test_bg.png" alt="">
+        コントラスト : contrast(10%)
+    </div>
+
+    <div class="contrastB">
+        <img src="./img/test_bg.png" alt="">
+        コントラスト : contrast(30%)
+    </div>
+
+    <div class="contrastC">
+        <img src="./img/test_bg.png" alt="">
+        コントラスト : contrast(50%)
+    </div>
+
+    <div class="contrastD">
+        <img src="./img/test_bg.png" alt="">
+        コントラスト : contrast(100%)
+    </div>
+
+    <!-- contrast -->
+
+
+    <!-- drop-shadow -->
+
+
+    <div class="drop-shadowA">
+        <img src="./img/test_bg.png" alt="">
+        ドロップシャドウ : drop-shadow(0 0 0) <br>
+    </div>
+
+    <div class="drop-shadowB">
+        <img src="./img/test_bg.png" alt="">
+        ドロップシャドウ : drop-shadow(10px 0 0) <br>
+    </div>
+
+    <div class="drop-shadowC">
+        <img src="./img/test_bg.png" alt="">
+        ドロップシャドウ : drop-shadow(0 0 10px blue) <br>
+    </div>
+
+    <div class="drop-shadowD">
+        <img src="./img/test_bg.png" alt="">
+        ドロップシャドウ : drop-shadow(-10px 10px 10px black) <br>
+    </div>
+
+
+    <!-- drop-shadow -->
+
+
+    <!-- hue-rotate -->
+
+    <div class="hue-rotateA">
+        <img src="./img/test_bg.png" alt="">
+        色相 : hue-rotate(0deg)<br>
+    </div>
+
+    <div class="hue-rotateB">
+        <img src="./img/test_bg.png" alt="">
+        色相 : hue-rotate(90deg)<br>
+    </div>
+
+    <div class="hue-rotateC">
+        <img src="./img/test_bg.png" alt="">
+        色相 : hue-rotate(180deg)<br>
+    </div>
+
+    <div class="hue-rotateD">
+        <img src="./img/test_bg.png" alt="">
+        色相 : hue-rotate(270deg)<br>
+    </div>
+
+    <!-- hue-rotate -->
+
+
 </body>
 
 </html>
