@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Filter</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .grid {
+            width: 320px;
+            height: 209px;
+            border: 1px solid gray;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .sample_image {
+            display: flex;
+            height: 180px;
+        }
+
+        .half {
+            width: 50%;
+            height: 100%;
+            background-image: url("./img/test_bg.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .label {
+            height: 29px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 14px;
+            line-height: 29px;
+            text-align: center;
+        }
+
+        .brightness .left {
+            filter: brightness(50%);
+        }
+
+        .brightness .right {
+            filter: brightness(200%);
+        }
+
+        .blur .left {
+            filter: blur(0px);
+        }
+
+        .blur .right {
+            filter: blur(4px);
+        }
+
+        .grayscale .left {
+            filter: grayscale(0%);
+        }
+
+        .grayscale .right {
+            filter: grayscale(100%);
+        }
+
+        .contrast .left {
+            filter: contrast(50%);
+        }
+
+        .contrast .right {
+            filter: contrast(200%);
+        }
+
+        .drop-shadow .left {
+            filter: drop-shadow(0 0 0 transparent);
+        }
+
+        .drop-shadow .right {
+            filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.6));
+        }
+
+        .hue-rotate .left {
+            filter: hue-rotate(0deg);
+        }
+
+        .hue-rotate .right {
+            filter: hue-rotate(180deg);
+        }
+
+        .invert .left {
+            filter: invert(0%);
+        }
+
+        .invert .right {
+            filter: invert(100%);
+        }
+
+        .opacity .left {
+            filter: opacity(100%);
+        }
+
+        .opacity .right {
+            filter: opacity(50%);
+        }
+
+        .saturate .left {
+            filter: saturate(0%);
+        }
+
+        .saturate .right {
+            filter: saturate(200%);
+        }
+
+        .sepia .left {
+            filter: sepia(0%);
+        }
+
+        .sepia .right {
+            filter: sepia(100%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CCS Filter</h2>
+
+    <div class="container">
+
+        <div class="grid brightness">
+            <div class="sample_image">
+                <div class="half left"></div>
+                <div class="half right"></div>
+            </div>
+            <div class="label">brightness / 明るさ</div>
+        </div>
+
+        <div class="grid blur">
+            <div class="sample_image">
+                <div class="half left"></div>
+                <div class="half right"></div>
+            </div>
+            <div class="label">blur / ぼかし</div>
+        </div>
+
+        <div class="grid grayscale">
+            <div class="sample_image">
+                <div class="half left"></div>
+                <div class="half right"></div>
+            </div>
+            <div class="label">grayscale / モノクロ</div>
+        </div>
+
+        <div class="grid contrast">
+            <div class="sample_image">
+                <div class="half left"></div>
+                <div class="half right"></div>
+            </div>
+            <div class="label">contrast / コントラスト</div>
+        </div>
+
+        <div class="grid drop-shadow">
+            <div class="sample_image">
+                <div class="half left"></div>
+                <div class="half right"></div>
+            </div>
+            <div class="label">drop-shadow / 影</div>
+        </div>
+
+        <div class="grid hue-rotate">
+            <div class="sample_image">
+                <div class="half left"></div>
+                <div class="half right"></div>
+            </div>
+            <div class="label">hue-rotate / 色相</div>
+        </div>
+
+        <div class="grid invert">
+            <div class="sample_image">
+                <div class="half left"></div>
+                <div class="half right"></div>
+            </div>
+            <div class="label">invert / 反転</div>
+        </div>
+
+        <div class="grid opacity">
+            <div class="sample_image">
+                <div class="half left"></div>
+                <div class="half right"></div>
+            </div>
+            <div class="label">opacity / 透明度</div>
+        </div>
+
+        <div class="grid saturate">
+            <div class="sample_image">
+                <div class="half left"></div>
+                <div class="half right"></div>
+            </div>
+            <div class="label">saturate / 彩度</div>
+        </div>
+
+        <div class="grid sepia">
+            <div class="sample_image">
+                <div class="half left"></div>
+                <div class="half right"></div>
+            </div>
+            <div class="label">sepia / セピア</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
