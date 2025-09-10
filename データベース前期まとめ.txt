@@ -1,0 +1,78 @@
+
+Q1.�e�[�u���̍쐬���s��SQL�����쐬���Ă��������B(�摜�Q��)
+
+[�e�[�u���̒�`]
+
+�e�[�u���� : monster
+
+�J������   �^                   ����(�e�[�u���Ƃ͖��֌W)
+
+id         �����^(���j�[�N�Ȓl) ID�ԍ�
+name       �e�L�X�g�^(NULL�s��) ���O
+system     �e�L�X�g�^(NULL�s��) �n��
+HP         ���l�^               �̗�
+experience ���l�^               �o���l
+dropitem   �e�L�X�g�^(NULL��)   �h���b�v�A�C�e��
+
+CREATE TABLE monster (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    system TEXT NOT NULL,
+    HP NUMERIC,
+    experience NUMERIC,
+    dropitem TEXT
+);
+
+----------------
+Q2.�e�[�u���ւ̃��R�[�h�o�^���s��SQL�����쐬���Ă��������B(�摜�Q��)
+(�S15��)
+SELECT * FROM monster;
+
+----------------
+Q3.�e�[�u������̃��R�[�h�������s��SQL�����쐬���Ă��������B
+(�S����id, ���O, HP��\��)
+SELECT id, name, HP
+FROM monster;
+
+----------------
+Q4.�o���l��1000�ȏ�̃��R�[�h���e�[�u�����猟�����Ă��������B
+(id, ���O, �n��, HP, �o���l��\��)
+SELECT id, name ,system ,HP ,experience
+FROM monster
+WHERE experience >= 1000;
+
+ ----------------
+Q5.�h���b�v�A�C�e���������Ă��Ȃ������X�^�[���������Ă��������B
+(id, ���O, �h���b�v�A�C�e����\��)
+
+�q���g : �h���b�v�A�C�e���������Ă��Ȃ� = �Z���̒��g��NULL�̏��
+SELECT id,name,dropitem
+FROM monster
+WHERE dropitem is NULL;
+
+
+----------------
+Q6.�n����???�n�����X�^�[��HP�̕��ϒl���v�Z���ĕ\�����Ă��������B
+(�n��, ����HP��\��, ������HP�͕ʖ�"avg_HP"�Ƃ���)
+SELECT system, AVG(HP)  as avg_HP
+FROM monster
+WHERE system = '???';
+
+----------------
+Q7.�n�����Ƃ̃��R�[�h����\�����Ă��������B
+(�n��, ���R�[�h����\��, �����R�[�h����ʖ�"number_of_records"�Ƃ���)
+SELECT
+    system,
+    count(*) as number_of_records
+  FROM monster
+  GROUP BY system;
+
+
+----------------
+Q8.�h���b�v�A�C�e�������˂����݂̂̃����X�^�[���������Ă��������B
+(���O, �n��, �h���b�v�A�C�e����\��)
+
+�q���g : �h���b�v�A�C�e���𕶎���Ƃ��āA"����"�܂���"���̂�"���I����Ă�����̂�����"
+SELECT name, system, dropitem
+FROM monster
+WHERE dropitem like '%����' OR dropitem like '%���̂�';
